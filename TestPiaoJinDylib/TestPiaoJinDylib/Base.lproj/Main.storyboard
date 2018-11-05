@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VhB-eS-SKp"/>
+                        <viewControllerLayoutGuide type="bottom" id="uTl-uv-mfr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4Y-Lq-rR3">
+                                <rect key="frame" x="105.5" y="120" width="164" height="28"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="将动态库的zip包解压到沙盒">
+                                    <color key="titleColor" red="0.12941294910000001" green="0.12940964099999999" blue="0.12941190599999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="unZipFramework:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aQ1-Oz-Oe0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rns-6G-Jkd">
+                                <rect key="frame" x="111" y="178" width="153" height="28"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="使用NSBundle加载动态库">
+                                    <color key="titleColor" red="0.12941294910000001" green="0.12940964099999999" blue="0.12941190599999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadFrameworkForNSBundle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="l2i-Re-Q2B"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w5C-lL-8uf">
+                                <rect key="frame" x="97.5" y="294" width="180" height="28"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="使用NSBundle加载动态库释放">
+                                    <color key="titleColor" red="0.12941294910000001" green="0.12940964099999999" blue="0.12941190599999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="unloadForNSBundle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VpV-hg-aXX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rLC-UV-Tx1">
+                                <rect key="frame" x="120" y="236" width="135" height="28"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="使用dlopen加载动态库">
+                                    <color key="titleColor" red="0.12941294910000001" green="0.12940964099999999" blue="0.12941190599999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="loadFrameworkForDlopen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m2y-nT-RCD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x2V-ow-fd4">
+                                <rect key="frame" x="100" y="352" width="175" height="28"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="使用dlopen加载动态库的释放">
+                                    <color key="titleColor" red="0.12941294910000001" green="0.12940964099999999" blue="0.12941190599999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="dlcloseForDlopen:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nKP-5r-SYw"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3to-5Z-Igw">
+                                <rect key="frame" x="107.5" y="410" width="160" height="28"/>
+                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                <state key="normal" title="利用运行时调用动态库方法">
+                                    <color key="titleColor" red="0.12941294910000001" green="0.12940964099999999" blue="0.12941190599999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="callFrameworkMethod:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ijc-HI-KVE"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="x2V-ow-fd4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Sl-PH-LS8"/>
+                            <constraint firstItem="w5C-lL-8uf" firstAttribute="top" secondItem="rLC-UV-Tx1" secondAttribute="bottom" constant="30" id="B8D-jY-Bw7"/>
+                            <constraint firstItem="rLC-UV-Tx1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Bws-FR-hUJ"/>
+                            <constraint firstItem="x2V-ow-fd4" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EF8-gr-v77"/>
+                            <constraint firstItem="Rns-6G-Jkd" firstAttribute="top" secondItem="p4Y-Lq-rR3" secondAttribute="bottom" constant="30" id="Li7-aV-QZq"/>
+                            <constraint firstItem="rLC-UV-Tx1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RtN-bK-VGf"/>
+                            <constraint firstItem="p4Y-Lq-rR3" firstAttribute="top" secondItem="VhB-eS-SKp" secondAttribute="bottom" constant="100" id="VV4-Bh-wKd"/>
+                            <constraint firstItem="w5C-lL-8uf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Z1m-Aw-wCJ"/>
+                            <constraint firstItem="3to-5Z-Igw" firstAttribute="top" secondItem="x2V-ow-fd4" secondAttribute="bottom" constant="30" id="aZQ-fj-r4C"/>
+                            <constraint firstItem="w5C-lL-8uf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="b8J-Ea-qeX"/>
+                            <constraint firstItem="3to-5Z-Igw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="g8g-IR-JnD"/>
+                            <constraint firstItem="Rns-6G-Jkd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="tBa-Nt-ud2"/>
+                            <constraint firstItem="x2V-ow-fd4" firstAttribute="top" secondItem="w5C-lL-8uf" secondAttribute="bottom" constant="30" id="y4O-vj-zne"/>
+                            <constraint firstItem="rLC-UV-Tx1" firstAttribute="top" secondItem="Rns-6G-Jkd" secondAttribute="bottom" constant="30" id="yR3-tO-QCk"/>
+                            <constraint firstItem="p4Y-Lq-rR3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zVH-xI-4iu"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
